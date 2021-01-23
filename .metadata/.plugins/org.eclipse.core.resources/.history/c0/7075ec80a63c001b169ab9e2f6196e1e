@@ -1,0 +1,15 @@
+package strings;
+
+public class FindFirstNonRepeatedCharacterInString {
+
+	public static void main(String[] args) {
+		 System.out.println("First non repeated character for String analogy is : "
+		      + getNonRepeatedCharacter("analogy"));
+
+	}
+
+	public static Character getNonRepeatedCharacter(String s) {
+		return null;
+		
+	}
+}

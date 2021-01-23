@@ -1,0 +1,21 @@
+package strings;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class FindFirstNonRepeatedCharacterInString {
+
+	public static void main(String[] args) {
+		 System.out.println("First non repeated character for String analogy is : "
+		      + getNonRepeatedCharacter("analogy"));
+
+	}
+
+	public static Character getNonRepeatedCharacter(String s) {
+		
+		Map<Character,Integer> countChar=new LinkedHashMap<Character,Integer>();
+		
+		return null;
+		
+	}
+}

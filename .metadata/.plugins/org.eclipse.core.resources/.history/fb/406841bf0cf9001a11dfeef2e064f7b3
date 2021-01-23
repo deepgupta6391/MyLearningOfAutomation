@@ -1,0 +1,18 @@
+package strings;
+
+public class AddStrings {
+
+	public static void main(String[] args) {
+		
+		String num1="3571";
+		String num2="281";
+
+	}
+	
+	 public static String addStrings(String num1, String num2) {
+	        StringBuilder sb=new StringBuilder();
+	        int carry=0;
+	        for(int i=num1.length()-1,j=num2.length()-1;i)
+	    }
+
+}

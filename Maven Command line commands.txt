@@ -1,0 +1,12 @@
+mvn clean install -Denv="qa"
+mvn test -Denv=qa(just to test if the code is already compiled)
+mvn clean install -Dtest=com.qa.hubspot.tests.LoginPageTest -Denv=qa
+mvn clean install -Dtest=com.qa.hubspot.tests.* -Denv=qa(execute all classes under this package)
+mvn clean install -Dtest=com.qa.hubspot.tests.* -Denv=qa -Dbrowser=chrome -Durl=https://app.hubspot.com
+
+
+*****************************************************
+For multithreading:
+ 
+1)mvn compile
+2)mvn exec:java -Dexec.mainClass="com.test.runner.GoogleTestRunner" -Dchrome=2 -Dfirefox=2

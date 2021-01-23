@@ -1,0 +1,14 @@
+package JavaBasics;
+
+public class LoopsConcept1 {
+
+	public static void main(String[] args) {
+		
+		//a to z:
+		for(char c='a';c<='z';c++) {
+			System.out.println(c);
+		}
+
+	}
+
+}

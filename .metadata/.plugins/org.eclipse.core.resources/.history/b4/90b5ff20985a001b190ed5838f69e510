@@ -1,0 +1,10 @@
+package rough;
+
+public class GetBookingIdsClass {
+	
+	private String firstname;
+	private String lastname;
+	private String checkin;
+	private String date;
+
+}

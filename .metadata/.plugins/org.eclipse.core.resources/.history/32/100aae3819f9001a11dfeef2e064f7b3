@@ -1,0 +1,32 @@
+package strings;
+
+public class SplitAStringInBalancesString {
+
+	public static void main(String[] args) {
+		//String s = "RLRRLLRLRL";
+		String s = "RLLLLRRRLR";
+		
+		System.out.println(balancedStringSplit(s));
+
+	}
+	
+	 public static int balancedStringSplit(String s) {
+		 int maxBalString=0;
+		 int rCount=0;
+		 int lCount=0;
+		 
+		 for(int i=0;i<s.length();i++) {
+			 if(s.charAt(i)=='R')
+				 rCount++;
+			 if(s.charAt(i)=='L')
+				 lCount++;
+			 if(rCount==lCount) {
+				 maxBalString++;
+			 }
+		 }
+		 
+		 
+		return maxBalString;        
+	    }
+
+}

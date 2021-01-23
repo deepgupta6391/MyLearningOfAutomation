@@ -1,0 +1,35 @@
+package strings;
+
+import java.util.HashMap;
+
+public class RansomNote {
+
+	public static void main(String[] args) {
+
+		String ransomNote = "aab", magazine = "baa";
+		System.out.println(canConstruct(ransomNote, magazine));
+	}
+
+	public static boolean canConstruct(String ransomNote, String magazine) {
+		
+		
+		HashMap<Character, Integer> ran=new HashMap<Character, Integer>();
+		
+		for(int i=0;i<ransomNote.length();i++) {
+			
+			Integer count=ran.get(ransomNote.charAt(i));
+			
+			if(!ran.containsKey(ransomNote.charAt(i))) {
+				ran.put(ransomNote.charAt(i), 1);
+			}
+			else
+			{
+				ran.put(ransomNote.charAt(i), count+1);
+			}
+		}
+		System.out.println(ran);
+		
+		return magazine.contains(ransomNote);
+
+	}
+}

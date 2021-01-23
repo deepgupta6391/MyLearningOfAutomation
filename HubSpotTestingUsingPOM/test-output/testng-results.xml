@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="1" total="17" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Hub Spot Regression Suite" duration-ms="79021" started-at="2020-08-26T16:49:50Z" finished-at="2020-08-26T16:51:09Z">
+    <groups>
+    </groups>
+    <test name="Regression Functional Regression Test 1" duration-ms="48404" started-at="2020-08-26T16:49:50Z" finished-at="2020-08-26T16:50:38Z">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="setUp" is-config="true" duration-ms="6551" started-at="2020-08-26T16:49:50Z" finished-at="2020-08-26T16:49:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyLoginPageTitleTest" duration-ms="4712" started-at="2020-08-26T16:49:56Z" finished-at="2020-08-26T16:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageTitleTest -->
+        <test-method status="PASS" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifySignUpLinkTest" duration-ms="967" started-at="2020-08-26T16:50:01Z" finished-at="2020-08-26T16:50:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpLinkTest -->
+        <test-method status="PASS" signature="verifyNoAccountText()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyNoAccountText" duration-ms="772" started-at="2020-08-26T16:50:02Z" finished-at="2020-08-26T16:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNoAccountText -->
+        <test-method status="PASS" signature="verifyEmailAndPasswordLabelText()[pri:4, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyEmailAndPasswordLabelText" duration-ms="1473" started-at="2020-08-26T16:50:03Z" finished-at="2020-08-26T16:50:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailAndPasswordLabelText -->
+        <test-method status="PASS" signature="verifyShowAndHidePasswordLinkText()[pri:5, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyShowAndHidePasswordLinkText" duration-ms="5440" started-at="2020-08-26T16:50:04Z" finished-at="2020-08-26T16:50:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyShowAndHidePasswordLinkText -->
+        <test-method status="PASS" signature="verifyForgotPasswordLink()[pri:6, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyForgotPasswordLink" duration-ms="756" started-at="2020-08-26T16:50:10Z" finished-at="2020-08-26T16:50:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyForgotPasswordLink -->
+        <test-method status="PASS" signature="verifyRememeberMeCheckBox()[pri:7, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyRememeberMeCheckBox" duration-ms="766" started-at="2020-08-26T16:50:11Z" finished-at="2020-08-26T16:50:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRememeberMeCheckBox -->
+        <test-method status="PASS" signature="verifyLoginButtonIsDisabled()[pri:8, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyLoginButtonIsDisabled" duration-ms="661" started-at="2020-08-26T16:50:11Z" finished-at="2020-08-26T16:50:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginButtonIsDisabled -->
+        <test-method status="PASS" signature="verifyGoogleAndSSOBtn()[pri:9, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyGoogleAndSSOBtn" duration-ms="1493" started-at="2020-08-26T16:50:12Z" finished-at="2020-08-26T16:50:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoogleAndSSOBtn -->
+        <test-method status="PASS" signature="verifyFooterText()[pri:10, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="verifyFooterText" duration-ms="668" started-at="2020-08-26T16:50:14Z" finished-at="2020-08-26T16:50:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterText -->
+        <test-method status="FAIL" signature="loginTest()[pri:12, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="loginTest" duration-ms="23248" started-at="2020-08-26T16:50:14Z" finished-at="2020-08-26T16:50:37Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for title to be "Reports dashboard". Current title: "HubSpot Login" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LENOVO-PC', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 84.0.522.63, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:50124}, msedge: {msedgedriverVersion: 84.0.522.63 (602bb6b61c9016..., userDataDir: C:\Users\DEEPSH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5096b16c7711d00324755e461b12bcea]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be "Reports dashboard". Current title: "HubSpot Login" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LENOVO-PC', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 84.0.522.63, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:50124}, msedge: {msedgedriverVersion: 84.0.522.63 (602bb6b61c9016..., userDataDir: C:\Users\DEEPSH~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 5096b16c7711d00324755e461b12bcea
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.hubspot.util.ElementUtil.waitForTitlePresent(ElementUtil.java:24)
+at com.qa.hubspot.page.HomePage.getHomePageTitle(HomePage.java:34)
+at com.qa.hubspot.tests.LoginPageTest.loginTest(LoginPageTest.java:133)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@5b275dab]" name="tearDown" is-config="true" duration-ms="836" started-at="2020-08-26T16:50:37Z" finished-at="2020-08-26T16:50:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+    </test> <!-- Regression Functional Regression Test 1 -->
+    <test name="Regression Functional Regression Test 2" duration-ms="30465" started-at="2020-08-26T16:50:38Z" finished-at="2020-08-26T16:51:09Z">
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="setUp" is-config="true" duration-ms="13570" started-at="2020-08-26T16:50:38Z" finished-at="2020-08-26T16:50:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="verifyHomePageTitleTest" duration-ms="12289" started-at="2020-08-26T16:50:52Z" finished-at="2020-08-26T16:51:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleTest -->
+        <test-method status="PASS" signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="verifyHomePageHeaderTest" duration-ms="777" started-at="2020-08-26T16:51:04Z" finished-at="2020-08-26T16:51:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageHeaderTest -->
+        <test-method status="PASS" signature="verifyLoggedInUserTest()[pri:3, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="verifyLoggedInUserTest" duration-ms="2397" started-at="2020-08-26T16:51:05Z" finished-at="2020-08-26T16:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoggedInUserTest -->
+        <test-method status="PASS" signature="verifyHeaderContents()[pri:4, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="verifyHeaderContents" duration-ms="280" started-at="2020-08-26T16:51:08Z" finished-at="2020-08-26T16:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderContents -->
+        <test-method status="PASS" signature="verifyLinksUnderContacts()[pri:5, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="verifyLinksUnderContacts" duration-ms="356" started-at="2020-08-26T16:51:08Z" finished-at="2020-08-26T16:51:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinksUnderContacts -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@77cd7a0]" name="tearDown" is-config="true" duration-ms="778" started-at="2020-08-26T16:51:08Z" finished-at="2020-08-26T16:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+    </test> <!-- Regression Functional Regression Test 2 -->
+  </suite> <!-- Hub Spot Regression Suite -->
+</testng-results>

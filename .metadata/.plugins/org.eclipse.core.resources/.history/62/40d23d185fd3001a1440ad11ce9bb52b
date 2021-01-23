@@ -1,0 +1,15 @@
+package encapsulationConcept;
+
+public class EmployeeData {
+
+	public String name;
+	public String id;
+	public int age;
+	public String dept;
+	private int salary;
+
+	public static void main(String[] args) {
+
+	}
+
+}

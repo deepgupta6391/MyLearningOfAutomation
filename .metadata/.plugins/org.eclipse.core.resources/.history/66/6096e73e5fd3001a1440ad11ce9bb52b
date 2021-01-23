@@ -1,0 +1,32 @@
+package encapsulationConcept;
+
+public class EmployeeData {
+
+	public String name;
+	public String id;
+	public int age;
+	public String dept;
+	private int salary;
+
+	public EmployeeData(String name, String id, int age, String dept, int salary) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.age = age;
+		this.dept = dept;
+		this.salary = salary;
+	}
+
+	public void getEmployeeName() {
+		System.out.println("get emp name");
+	}
+
+	public void getEmployeeBonus() {
+		System.out.println("get emp bonus");
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

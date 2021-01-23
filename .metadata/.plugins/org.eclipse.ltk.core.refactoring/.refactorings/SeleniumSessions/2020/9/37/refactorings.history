@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JavaScriptUtil.java&apos; to &apos;Sep2020POMSeries/src/main/java/com.qa.hubspot.utils&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumSessions&apos;&#x0D;&#x0A;- Destination element: &apos;Sep2020POMSeries/src/main/java/com.qa.hubspot.utils&apos;&#x0D;&#x0A;- Original element: &apos;SeleniumTutorialJavaScriptExecutor.JavaScriptUtil.java&apos;" description="Copy compilation unit" destination="=Sep2020POMSeries/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.qa.hubspot.utils" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;SeleniumTutorialJavaScriptExecutor{JavaScriptUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1599769511674" units="1" version="1.0"/>
+</session>

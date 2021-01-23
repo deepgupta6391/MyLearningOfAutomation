@@ -1,0 +1,13 @@
+package java2blog;
+
+public class FindLocalMinimaInArray {
+
+	public static void main(String[] args) {
+		
+		int [] arr = {10, 5, 3, 6, 13, 16, 7};
+		
+		System.out.println("Local minima is : "+findLocalMinima(arr,0,arr.length));
+		
+	}
+
+}

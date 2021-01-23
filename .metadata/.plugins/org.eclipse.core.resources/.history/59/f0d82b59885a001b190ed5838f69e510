@@ -1,0 +1,9 @@
+package rough;
+
+public class AuthClass {
+	
+	private String username;
+	private String password;
+	
+	
+}

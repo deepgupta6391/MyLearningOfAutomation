@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [HubSpot App Regression Test Suite]" parallel="tests">
+  <test thread-count="2" name="login test(failed)" parallel="methods">
+    <parameter name="password" value="Lovely@1234"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://app.hubspot.com/login"/>
+    <parameter name="username" value="deep.gupta.6391@gmail.com"/>
+    <classes>
+      <class name="com.tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="pageTitleTest"/>
+          <include name="setUp"/>
+          <include name="signUpLink"/>
+        </methods>
+      </class> <!-- com.tests.LoginTest -->
+    </classes>
+  </test> <!-- login test(failed) -->
+  <test thread-count="2" name="sign up test1(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://app.hubspot.com/signup/crm/step/user-info"/>
+    <classes>
+      <class name="com.tests.SignUpTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyGoogleButton"/>
+          <include name="verifyServicesAgreementLink"/>
+          <include name="tearDown"/>
+          <include name="verifyCreateAccountTest"/>
+        </methods>
+      </class> <!-- com.tests.SignUpTest -->
+    </classes>
+  </test> <!-- sign up test1(failed) -->
+</suite> <!-- Failed suite [HubSpot App Regression Test Suite] -->

@@ -1,0 +1,172 @@
+package rough;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import static org.hamcrest.Matchers.*;
+
+import java.util.Date;
+
+/*
+ * http://restful-booker.herokuapp.com/apidoc/index.html
+ */
+
+public class PracticingRestFul_Booker {
+	String token = null;
+	int bookingId;
+
+	@Test(enabled = false)
+	public void createTokenWithPojo() {
+		AuthClass auth = new AuthClass("admin", "password123");
+
+		ObjectMapper mapper = new ObjectMapper();
+		String authJson = null;
+		try {
+			authJson = mapper.writeValueAsString(auth);
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		RequestSpecification request = RestAssured.given().header("Content-Type", "application/json").body(authJson);
+		Response response = request.post("/auth");
+
+		System.out.println(response.getStatusCode());
+		// System.out.println(response.prettyPrint());
+		System.out.println(response.asString());
+		System.out.println(response.getBody().asString());
+		System.out.println(response.getStatusLine());
+
+		JsonPath js = response.jsonPath();
+		System.out.println(js.getString("token"));
+		token = js.getString("token");
+
+		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertTrue(!token.isEmpty());
+		System.out.println("*******************************");
+	}
+
+	@Test(enabled = false)
+	public void getBookingIds() {
+
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		RequestSpecification request = RestAssured.given();
+
+		// request.queryParam("firstname", "sally");
+		// request.queryParam("lastname", "brown");
+
+		// request.queryParam("checkin", "2014-03-13");
+		// request.queryParam("checkout", "2014-05-21");
+
+		Response response = request.get("/booking");
+		System.out.println(response.getStatusCode());
+		System.out.println(response.getStatusLine());
+		System.out.println(response.getContentType());
+		JsonPath js = response.jsonPath();
+		System.out.println(js.getString("bookingid"));
+
+		Assert.assertEquals(response.getStatusCode(), 200);
+		String bookingIds = js.getString("bookingid");
+		Assert.assertTrue(!bookingIds.isEmpty());
+
+	}
+
+	@Test(enabled = false)
+	public void getBookingReturns200() {
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		RestAssured.basePath = "/booking";
+		Response response = RestAssured.given().header("Accept", "application/json")
+				.get("/" + String.valueOf(bookingId));
+		System.out.println(response.getStatusLine());
+		System.out.println(response.prettyPrint());
+
+		JsonPath js = response.jsonPath();
+
+		System.out.println(js.getString("firstname"));
+		System.out.println(js.getInt("totalprice"));
+		System.out.println(js.getString("bookingdates.checkin"));
+		System.out.println(js.getBoolean("depositpaid"));
+
+		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertEquals(js.getBoolean("depositpaid"), true);
+	}
+
+	@Test(enabled = false)
+	public void getBookingWithIncorrectReturns418() {
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		RestAssured.basePath = "/booking";
+		Response response = RestAssured.given().header("Accept", "test").get("/2");
+		System.out.println(response.getStatusLine());
+		Assert.assertEquals(response.getStatusCode(), 418);
+
+	}
+
+	@Test
+	public void createBookingReturns200() {
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+
+		BookingDates dates = new BookingDates(new Date(), new Date());
+
+		CreateBooking cb = new CreateBooking("Lovely", "Keshri", 500, true, dates, "Breakfast");
+
+		ObjectMapper mapper = new ObjectMapper();
+		String bookingData = null;
+		try {
+			bookingData = mapper.writeValueAsString(cb);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		Response response = RestAssured.given().header("Content-Type", "application/json")
+				.header("Accept", "application/json").body(bookingData).post("/booking");
+
+		System.out.println(response.getStatusCode());
+		System.out.println(response.getStatusLine());
+		System.out.println(response.asPrettyString());
+
+		JsonPath js = response.jsonPath();
+
+		Assert.assertEquals(response.getStatusCode(), 200);
+		bookingId = js.getInt("bookingid");
+		System.out.println("Booking id is " + bookingId);
+		Assert.assertNotNull(bookingId);
+
+	}
+
+	@Test(dependsOnMethods = "createBookingReturns200")
+	public void updateBookingReturns200() {
+		RestAssured.baseURI="https://restful-booker.herokuapp.com";
+		
+		BookingDates dates=new BookingDates(new Date(), new Date());		
+		CreateBooking cb=new CreateBooking("Lovely123", "Keshri123", 400, true, dates, "Dinner");
+		
+		ObjectMapper mapper=new ObjectMapper();
+		String updateUser=null;
+		
+		try {
+			updateUser=mapper.writeValueAsString(cb);
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Response response=RestAssured.given()
+				.header("Content-Type","application/json")
+				.header("Accept","application/json")
+				.header("Cookie","token=abc123")
+				.body(updateUser)
+				.put("/booking/"+String.valueOf(bookingId));
+		
+		System.out.println(response.getStatusCode());
+		Assert.assertEquals(response.getStatusCode(), 200);
+		System.out.println(response.asPrettyString());
+	}
+}

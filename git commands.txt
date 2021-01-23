@@ -1,0 +1,59 @@
+create and account on github
+download git SCM tool - https://git-scm.com/downloads
+
+go to ur project directory in eclipse: create .gitignore file
+
+git init
+git remote add origin https://github.com/deepgupta6391/HubSpotPOM.git
+
+git status//red
+git add .
+git status//green
+
+git commit -m "commit reason"
+git push -u origin master
+
+========================================
+git clone projectpathingithub --to download
+
+==================================
+go to project path and type
+
+git branch
+git fetch && git checkout dealspage(for first time)
+git branch
+git add src/main/java/com/qa/hubspot/page/DealsPage.java
+git commit -m "created deals page"
+git push origin dealspage
+git branch
+git checkout master
+git pull origin from master
+======================================
+Points:
+Code cannot be pushed from dealspage to master
+code can be pushed from master to master
+***********************************************
+mkdir gitfetchandpull
+notepad file1.txt(touch file1.txt --for mac)
+add file2.txt in github directly
+git fetch
+git merge
+and file3.txt in github directly
+git pull
+
+
+mkdir gitcleanSep
+notepad file1.txt
+file1.txt
+more file1.txt
+git clean -n
+git clean -n -f
+git clean -n -d
+git rm file1.txt
+git rm
+============================================
+Jenkins scheduler
+1.*/5 * * * --in every 5 mins
+2.* 8 * * * -- everyday at 8h00
+3.H 7 * * * --daily 7AM
+4.H 16 * * 0 -- every sunday 4pm

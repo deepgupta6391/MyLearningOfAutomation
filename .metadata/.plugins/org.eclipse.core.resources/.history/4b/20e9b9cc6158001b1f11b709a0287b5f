@@ -1,0 +1,18 @@
+package com.qa.opencart.utils;
+
+import java.util.Properties;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+public class OptionsManager {
+	
+	private Properties prop;
+	private ChromeOptions co;
+	private FirefoxOptions fo;
+	
+	public OptionsManager(Properties prop) {
+		this.prop=prop;
+	}
+
+}

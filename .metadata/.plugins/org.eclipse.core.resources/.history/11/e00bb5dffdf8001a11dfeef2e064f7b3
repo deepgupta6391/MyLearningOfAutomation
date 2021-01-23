@@ -1,0 +1,16 @@
+package strings;
+
+public class RansomNote {
+
+	public static void main(String[] args) {
+
+		String ransomNote = "aab", magazine = "baa";
+		System.out.println(canConstruct(ransomNote, magazine));
+	}
+
+	public static boolean canConstruct(String ransomNote, String magazine) {
+		
+		return magazine.contains(ransomNote);
+
+	}
+}

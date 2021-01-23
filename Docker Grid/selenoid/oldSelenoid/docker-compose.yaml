@@ -1,0 +1,25 @@
+version: '3'
+services:
+  selenoid:
+   network_mode: bridge
+   image: aerokube/selenoid
+   volumes:
+     - "F:/Selenium Learning from Naveen/Docker Grid/oldSelenoid:/etc/selenoid"
+     - "/var/run/docker.sock:/var/run/docker.sock"
+     - "/Users/naveenautomationlabs/Documents/DockerGrid/selenoid/newselenoid/video:/opt/selenoid/video"
+   environment:
+     - OVERRIDE_VIDEO_OUTPUT_DIR=/opt/selenium/video
+     - TZ=Europe/Amsterdam
+   command: -listen :4444 -conf /etc/selenoid/browsers.json -video-output-dir /opt/selenoid/video/ -timeout 3m -limit 10
+
+   ports:
+     - "4444:4444"
+
+  selenoid-ui:
+    image: "aerokube/selenoid-ui"
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - "8080:8080"
+    command: ["--selenoid-uri", "http://selenoid:4444"]   

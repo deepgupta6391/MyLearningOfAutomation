@@ -1,0 +1,48 @@
+package CollectionsConcept;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrayListConcept {
+
+	public static void main(String[] args) {
+		ArrayList<String> employeeNameList = new ArrayList<String>();
+		employeeNameList.add("John");
+		employeeNameList.add("Ankit");
+		employeeNameList.add("Rohan");
+		employeeNameList.add("Amit");
+
+//		System.out.println("Employee list:");
+
+//		for (String empName : employeeNameList) {
+//			System.out.println(empName);
+//		}
+//
+//		Iterator iter = employeeNameList.iterator();
+//		while (iter.hasNext()) {
+//			System.out.println(iter.next());
+//		}
+		
+		employeeNameList.add("Deeps");
+		employeeNameList.add(2, "Honey");//will add only
+		
+		//System.out.println(employeeNameList);
+		System.out.println(employeeNameList.get(2));
+		System.out.println(employeeNameList.remove("Amit"));
+		employeeNameList.set(4,"Jiten");//update the particular position
+		employeeNameList.add("Jiten");
+		employeeNameList.add(null)
+		//employeeNameList.clear();
+		System.out.println(employeeNameList);
+		
+		
+		ListIterator<String> itr1=employeeNameList.listIterator(employeeNameList.size());
+		System.out.println("previous---------------------");
+		while(itr1.hasPrevious()) {
+			System.out.println(itr1.previous());
+		}
+		
+	}
+
+}

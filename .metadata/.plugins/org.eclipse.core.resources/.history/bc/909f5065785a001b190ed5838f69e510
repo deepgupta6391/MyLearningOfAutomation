@@ -1,0 +1,52 @@
+package Collections.LinkedListConcepts;
+
+/*https://letstalkalgorithms.com/linkedlist-implementation-java/*/
+public class MyLinkedList {
+
+	Node head = null, tail = null;
+	int s;
+
+	class Node {
+
+		int data;
+		Node next;
+
+		public Node(int data) {
+			this.data = data;
+			next = null;
+		}
+	}
+
+	public void printMyLinkedList() {
+		Node n = head;
+		while (n != null) {
+			System.out.println(n.data);
+			n = n.next;
+		}
+	}
+
+	public void add(int data) {
+
+		if (head == null) {
+			Node node = new Node(data);
+			head = node;
+			tail = node;
+		} else {
+
+			tail.next=new Node(data);
+			tail=tail.next;			
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		MyLinkedList ll = new MyLinkedList();
+
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.printMyLinkedList();
+	}
+
+}

@@ -1,0 +1,18 @@
+package strings;
+
+public class FirstUniqueInString {
+
+	public static void main(String[] args) {
+
+		String s = "loveleetcode";
+
+	}
+
+	public static int firstUniqChar(String s) {
+		
+		Map<Character,Integer> map=new LinkedHashMap
+		
+		return 0;
+
+	}
+}

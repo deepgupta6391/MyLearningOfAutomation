@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;CollectionsConcept.ArrayListConcept&apos; to &apos;Collections.ArrayListConcept&apos;&#x0D;&#x0A;- Original project: &apos;JavaSessions&apos;&#x0D;&#x0A;- Original element: &apos;JavaSessions/src/CollectionsConcept.ArrayListConcept&apos;&#x0D;&#x0A;- Renamed element: &apos;JavaSessions/src/Collections.ArrayListConcept&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;CollectionsConcept.ArrayListConcept&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;CollectionsConcept.ArrayListConcept" name="Collections.ArrayListConcept" qualified="false" references="true" stamp="1603212149993" textual="false" version="1.0"/>
+</session>

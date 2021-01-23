@@ -1,0 +1,28 @@
+package SeleniumTutorial;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class FileUploadUsingAutoIT {
+
+	public static void main(String[] args) throws Exception {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("http://www.tinyupload.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		//driver.findElement(By.name("uploaded_file")).click();
+		driver.findElement(By.xpath("//input[@name='uploaded_file']")).click();
+		Runtime.getRuntime().exec("F:\\Selenium Learning from Naveen\\AutoIt\\Fileupload.exe");
+		Thread.sleep(3000);
+		
+	}
+
+}

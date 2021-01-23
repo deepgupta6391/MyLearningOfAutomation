@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="HubSpot App Regression Test Suite" thread-count="2"
+	parallel="tests">
+	<!-- <groups> <run> <include name="login.*"></include> </run> </groups> -->
+
+	<test name="login test" verbose="2" thread-count="3"
+		parallel="methods">
+
+		
+		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://app.hubspot.com/login" />
+		<parameter name="username" value="deep.gupta.6391@gmail.com" />
+		<parameter name="password" value="Lovely@1234" />
+
+	<!-- <groups> <run> <include name="login"></include> </run> </groups> -->
+		
+		<classes>
+			<class name="com.tests.LoginTest">
+				<!-- <methods> <exclude name="signUpLink"></exclude> <exclude name="pageTitleTest"></exclude> 
+					</methods> -->
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="sign up test1" verbose="2" thread-count="2"
+		parallel="classes">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://app.hubspot.com/signup/crm/step/user-info" />
+		<classes>
+			<!-- <class name="com.tests.LoginTest" /> -->
+			<class name="com.tests.SignUpTest" />
+		</classes>
+
+	</test>
+
+
+
+</suite>

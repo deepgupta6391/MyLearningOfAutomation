@@ -1,0 +1,17 @@
+package strings;
+
+public class MaxRepeatingSubString {
+
+	public static void main(String[] args) {
+		String a = "ababc", b = "ab";
+		System.out.println(maxRepeating(a, b));
+
+	}
+
+	public static int maxRepeating(String sequence, String word) {
+		
+		
+		return 0;
+	}
+
+}

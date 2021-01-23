@@ -1,0 +1,19 @@
+package rough;
+
+import java.util.Scanner;
+
+public class Rough1 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter STring");
+		String input=sc.nextLine();
+		StringBuilder sb=new StringBuilder(input);
+		StringBuilder sb2=new StringBuilder(sb).reverse();
+		if(sb.toString().equals(sb2.toString()))
+			System.out.println("Palindrome");
+
+	}
+
+}
